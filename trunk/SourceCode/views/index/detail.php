@@ -5,16 +5,27 @@
         </div>
         <form method="post" action="<?php echo base_url()."/index/result"; ?>">
             <div class="form-group" style="display: block;">
-                <input type="text" name="query" class="form-control" style="margin-bottom: 0px;" />
-                <input type="submit" class="btn btn-primary" value="Search" />
+                <input type="text" name="query" id="text-query" class="form-control" placeholder="<?php echo (isset($placeholder_search_text) ? $placeholder_search_text : ""); ?>" style="margin-bottom: 0px;" />
+                <input type="submit" id="button-search" class="btn btn-primary" value="Search" />
             </div>
         </form>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#button-search").click(function() {
+               var query = $("#text-query").val();
+               if (query != undefined && query != null && query != "") {
+                   return true;
+               }
+               return false; 
+            });
+        });
+        </script>
     </center>
     <hr />
     <a href="<?php echo base_url()."/index/result?query=".(isset($query) ? $query : ""); ?>">Back To Result</a>
     <hr />
     <div id="title">Title</div>
-    <div id="sub-title">Author - <?php echo date('d-m-Y'); ?></div>
+    <div id="sub-title">Author - <?php echo date('d M Y'); ?></div>
     <div id="text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam sem, eleifend ut aliquam a, dictum eget arcu. Maecenas non elit dictum, gravida nisl id, dictum leo. Cras vitae risus massa. Nam facilisis dapibus elit, quis consequat lacus pellentesque sollicitudin. Sed efficitur cursus libero ac tempus. Curabitur erat ante, ultrices vel lectus quis, rhoncus faucibus arcu. Duis at elit suscipit, pulvinar tortor id, sodales metus. Morbi malesuada, dolor in varius lacinia, lacus nisl venenatis urna, sed vehicula leo ipsum non eros. Nulla laoreet commodo leo, nec cursus leo tempus eu. Suspendisse potenti. Nullam sagittis sapien erat, a auctor nisl hendrerit non. Nam sagittis metus vel imperdiet porttitor. Pellentesque sodales sagittis facilisis. Morbi vitae neque malesuada, scelerisque purus eget, cursus sem.
 
