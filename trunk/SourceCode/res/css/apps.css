@@ -21,12 +21,20 @@ a{
     font-weight: bold;
 }
 
+#title .query-found{
+    font-weight: bold;
+}
+
 #sub-title {
     
 }
 
+.query-found {
+    font-weight: bolder;
+}
+
 #text {
-    
+    margin-top: 10px;
 }
 
 .keyword {
@@ -35,4 +43,8 @@ a{
 
 #text-query {
     width: 400px;
+}
+
+.result-content {
+    margin-bottom: 10px;
 }

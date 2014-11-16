@@ -18,7 +18,10 @@ Class IndexController extends Controller {
     public function result() {
         $this->data['master'] = "shared/master";
         $this->data['view'] = "result";
-        $this->data['query'] = $this->getParam("query");
+        $query = $this->getParam("query");
+        $model = $this->IndexService->getList($query);
+        $this->data['Model'] = $model;
+        $this->data['query'] = $query;
         $this->data['_PAGING_'] = $this->generatePaging();
         return $this->data;
     }
@@ -26,6 +29,9 @@ Class IndexController extends Controller {
     public function detail() {
         $this->data['master'] = "shared/master";
         $this->data['view'] = "detail";
+        $id = $this->getParam("id");
+        $model = $this->IndexService->getDocument($id);
+        $this->data['Model'] = $model;
         $this->data['query'] = $this->getParam("query");
         return $this->data;
     }

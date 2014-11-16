@@ -11,14 +11,19 @@
  * @author harry
  */
 class IndexService extends Service {
+    private $IndexDao = null;
     public function __construct() {
         parent::__construct();
+        $this->loadClass("IndexDao", "Dao");
+        $this->IndexDao = new IndexDao();
     }
     
-    public function getList() {
-        $this->loadClass("FunctionInfoDao", "Dao");
-        $FunctionDao = new FunctionInfoDao();
-        return $FunctionDao->getList();
+    public function getList($keyword) {
+        return $this->IndexDao->getList($keyword);
+    }
+    
+    public function getDocument($id) {
+        return $this->IndexDao->getObjectDocument($id);
     }
 }
 

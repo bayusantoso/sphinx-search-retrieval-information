@@ -1,0 +1,55 @@
+[Sun Nov 16 20:47:49.334 2014] [ 9068] listening on all interfaces, port=9312
+[Sun Nov 16 20:47:49.338 2014] [ 9068] listening on all interfaces, port=9306
+[Sun Nov 16 20:47:49.346 2014] [ 9068] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 20:47:49.366 2014] [ 9068] accepting connections
+[Sun Nov 16 20:52:00.119 2014] [ 7812] listening on all interfaces, port=9312
+[Sun Nov 16 20:52:00.123 2014] [ 7812] listening on all interfaces, port=9306
+[Sun Nov 16 20:52:00.130 2014] [ 7812] WARNING: index 'test1': lock: failed to lock C:\sphinx\data\test1.spl: No such file or directory; NOT SERVING
+[Sun Nov 16 20:52:00.132 2014] [ 7812] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 20:52:00.144 2014] [ 7812] WARNING: index 'rt': preload: failed to lock C:\sphinx\data\rt.lock: No such file or directory; NOT SERVING
+[Sun Nov 16 20:52:00.148 2014] [ 7812] accepting connections
+[Sun Nov 16 21:01:28.787 2014] [ 7812] caught SIGTERM, shutting down
+[Sun Nov 16 21:35:00.944 2014] [ 9068] rt: index rt: ramchunk saved in 0.019 sec
+[Sun Nov 16 21:35:01.044 2014] [ 9068] shutdown complete
+[Sun Nov 16 21:35:03.910 2014] [ 9180] listening on all interfaces, port=9312
+[Sun Nov 16 21:35:03.914 2014] [ 9180] listening on all interfaces, port=9306
+[Sun Nov 16 21:35:03.955 2014] [ 9180] rotating index 'test1': success
+[Sun Nov 16 21:35:03.976 2014] [ 9180] rotating index 'test1stemmed': success
+[Sun Nov 16 21:35:03.997 2014] [ 9180] accepting connections
+[Sun Nov 16 21:37:37.126 2014] [ 9180] rt: index rt: ramchunk saved in 0.013 sec
+[Sun Nov 16 21:37:37.144 2014] [ 9180] shutdown complete
+[Sun Nov 16 21:37:49.062 2014] [ 7544] listening on all interfaces, port=9312
+[Sun Nov 16 21:37:49.065 2014] [ 7544] listening on all interfaces, port=9306
+[Sun Nov 16 21:37:49.067 2014] [ 7544] WARNING: index 'test1': preload: failed to open C:\sphinx\data\test1.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 21:37:49.068 2014] [ 7544] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 21:37:49.087 2014] [ 7544] accepting connections
+[Sun Nov 16 21:47:46.254 2014] [ 7544] rt: index rt: ramchunk saved in 0.021 sec
+[Sun Nov 16 21:47:46.337 2014] [ 7544] shutdown complete
+[Sun Nov 16 21:47:49.463 2014] [ 4376] listening on all interfaces, port=9312
+[Sun Nov 16 21:47:49.467 2014] [ 4376] listening on all interfaces, port=9306
+[Sun Nov 16 21:47:49.476 2014] [ 4376] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 21:47:49.495 2014] [ 4376] accepting connections
+[Sun Nov 16 21:48:12.014 2014] [ 4376] rt: index rt: ramchunk saved in 0.011 sec
+[Sun Nov 16 21:48:12.076 2014] [ 4376] shutdown complete
+[Sun Nov 16 21:48:34.515 2014] [ 9852] listening on all interfaces, port=9312
+[Sun Nov 16 21:48:34.519 2014] [ 9852] listening on all interfaces, port=9306
+[Sun Nov 16 21:48:34.527 2014] [ 9852] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 21:48:34.545 2014] [ 9852] accepting connections
+[Sun Nov 16 21:51:50.068 2014] [ 9852] rt: index rt: ramchunk saved in 0.006 sec
+[Sun Nov 16 21:51:50.147 2014] [ 9852] shutdown complete
+[Sun Nov 16 21:51:59.834 2014] [ 5296] listening on all interfaces, port=9312
+[Sun Nov 16 21:51:59.838 2014] [ 5296] listening on all interfaces, port=9306
+[Sun Nov 16 21:51:59.846 2014] [ 5296] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 21:51:59.868 2014] [ 5296] accepting connections
+[Sun Nov 16 23:05:02.390 2014] [ 5296] rt: index rt: ramchunk saved in 0.020 sec
+[Sun Nov 16 23:05:02.441 2014] [ 5296] shutdown complete
+[Sun Nov 16 23:05:14.420 2014] [ 9604] listening on all interfaces, port=9312
+[Sun Nov 16 23:05:14.423 2014] [ 9604] listening on all interfaces, port=9306
+[Sun Nov 16 23:05:14.431 2014] [ 9604] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 23:05:14.451 2014] [ 9604] accepting connections
+[Sun Nov 16 23:06:41.544 2014] [ 9604] rt: index rt: ramchunk saved in 0.019 sec
+[Sun Nov 16 23:06:41.588 2014] [ 9604] shutdown complete
+[Sun Nov 16 23:06:54.319 2014] [ 8784] listening on all interfaces, port=9312
+[Sun Nov 16 23:06:54.323 2014] [ 8784] listening on all interfaces, port=9306
+[Sun Nov 16 23:06:54.331 2014] [ 8784] WARNING: index 'test1stemmed': preload: failed to open C:\sphinx\data\test1stemmed.sph: No such file or directory; NOT SERVING
+[Sun Nov 16 23:06:54.351 2014] [ 8784] accepting connections

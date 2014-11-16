@@ -52,8 +52,7 @@ class Controller extends Core {
     }
     
     protected function generatePaging($param = null) {
-        $string = "<hr />";
-        
+        $string = "";
         return $string;
     }
 }
