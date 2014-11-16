@@ -38,10 +38,23 @@ class Controller extends Core {
         return false;
     }
     
-    protected function getParam($key = null) {
-        if (is_null($key)) return null;
-        if(isset($_GET[$key])) return $_GET[$key];
-        if(isset($_POST[$key])) return $_POST[$key];
+    protected function getParam($name = null) {
+        $result = "";
+        if (!is_null($name) && !empty($name)) {
+            if (isset($_POST[$name])) { $result = $_POST[$name]; }
+            if (isset($_GET[$name])) { $result = $_GET[$name]; }
+        }
+        return $result;
+    }
+    
+    protected  function returnToIndex() {
+        redirect (base_url()."/");
+    }
+    
+    protected function generatePaging($param = null) {
+        $string = "<hr />";
+        
+        return $string;
     }
 }
 

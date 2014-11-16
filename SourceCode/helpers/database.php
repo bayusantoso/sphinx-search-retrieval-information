@@ -7,5 +7,5 @@
 $database["host"] = "localhost";
 $database["user"] = "root";
 $database["pass"] = "";
-$database["db_name"] = "travel";
+$database["db_name"] = "sphinx_search";
 ?>
