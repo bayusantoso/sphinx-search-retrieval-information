@@ -12,6 +12,22 @@
  */
 class IndexDao {
     //put your code here
+    public function __construct() {
+        parent::__construct();
+        $this->mTableName = "user_group";
+    }
+    
+    public function sphinxSearch() {
+        
+    }
+    
+    public function getList() {
+        
+    }
+    
+    public function getObject($id = null) {
+        return null;
+    }
 }
 
 ?>

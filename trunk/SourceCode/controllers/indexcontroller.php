@@ -11,37 +11,28 @@ Class IndexController extends Controller {
     public function index() {
         $this->data['master'] = "shared/master";
         $this->data['view'] = 'index';
-        $this->IndexService->getList();
         return $this->data;
     }
     
-    public function indexJson() {
-        
-    }
-
-    public function create() {
-        $this->createInputView();
-        return $this->data;
-    }
-    
-    public function edit() {
-        $this->createInputView();
+    public function result() {
+        $this->data['master'] = "shared/master";
+        $this->data['view'] = "result";
+        $this->data['query'] = $this->getParam("query");
+        $this->data['_PAGING_'] = $this->generatePaging();
         return $this->data;
     }
     
     public function detail() {
-        
-        return $this->data;
-    }
-    
-    public function delete() {
-        
-        return $this->data;
-    }
-    
-    private function createInputView() {
         $this->data['master'] = "shared/master";
-        $this->data['view'] = "input";
+        $this->data['view'] = "detail";
+        $this->data['query'] = $this->getParam("query");
+        return $this->data;
+    }
+    
+    public function about() {
+        $this->data['master'] = "shared/master";
+        $this->data['view'] = "about";
+        return $this->data;
     }
     
     private function generateFilter() {

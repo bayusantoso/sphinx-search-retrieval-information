@@ -17,6 +17,7 @@ class UserInfoController extends Controller{
     
     public function __construct() {
         parent::__construct();
+        $this->returnToIndex();
         $this->loadDefaultValue();
         $this->loadDefaultClass();
     }
