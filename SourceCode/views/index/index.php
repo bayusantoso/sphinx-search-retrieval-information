@@ -3,7 +3,7 @@
         <div id="logo">
             <a href="<?php echo base_url()."/index/"; ?>">You Type We Search</a>
         </div>
-        <form method="post" action="<?php echo base_url()."/index/result"; ?>">
+        <form method="get" action="<?php echo base_url()."/index/result"; ?>">
             <div class="form-group" style="display: block;">
                 <input type="text" name="query" id="text-query" class="form-control" placeholder="<?php echo (isset($placeholder_search_text) ? $placeholder_search_text : ""); ?>" style="margin-bottom: 0px;" />
                 <input type="submit" id="button-search" class="btn btn-primary" value="Search" />
