@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://sphinxsearch.com/forum/view.html?id=2972 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>
+Tutorial: Installing on Windows | Sphinx
+</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://sphinxsearch.com/favicon.ico">
+<link rel="stylesheet" href="./Tutorial  Installing on Windows   Sphinx_files/style.css" media="screen" type="text/css">
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<div id="wrapper">
+<div id="header">
+	<div id="logo">
+		<a href="http://sphinxsearch.com/">
+		<span>Open Source Search Server</span>
+		<img src="./Tutorial  Installing on Windows   Sphinx_files/logo.png" alt="Sphinx"></a>
+	</div>
+	<div id="call">
+		Call +1 (888) 333-1345&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://sphinxsearch.com/about/contact/#contacts">Contact</a>&nbsp;&nbsp;
+		<ul id="follow">
+		<li id="follow1"><a href="http://sphinxsearch.com/blog/feed/rss/" title="RSS"><span>RSS</span></a></li>
+		<li id="follow2"><a href="http://twitter.com/sphinxsearch" title="Twitter"><span>Twitter</span></a></li>
+		<li id="follow3"><a href="http://www.linkedin.com/companies/sphinx-technologies" title="LinkedIn"><span>LinkedIn</span></a></li>
+		<li id="follow4"><a href="http://vkontakte.ru/club20032698" title="Vkontakte"><span>VKontakte</span></a></li>
+		<li><a href="http://plus.google.com/113485961989931426612?prsrc=3" rel="publisher" style="text-decoration:none;" title="Google+">
+<img src="./Tutorial  Installing on Windows   Sphinx_files/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"><span>Google+</span></a></li>
+		<li><a href="skype:sphinxsearch?chat" title="Chat via Skype"><img src="./Tutorial  Installing on Windows   Sphinx_files/skype-logo-sm.png" alt="Skype"><span>Skype</span></a></li>
+		 <li><a href="http://www.facebook.com/SphinxSearchServer" title="Facebook"><img width="16px" height="16px" src="./Tutorial  Installing on Windows   Sphinx_files/fb-logo-sm.png" alt="Facebook"><span>Facebook</span></a></li>
+		</ul>
+	</div>
+<ul id="topnav">
+	<li>
+		<a href="http://sphinxsearch.com/downloads/">Downloads</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/downloads/release/">Release</a></li>		
+					<li><a href="http://sphinxsearch.com/downloads/beta/">Beta</a></li>		
+					<li><a href="http://sphinxsearch.com/downloads/#svn">Development</a></li>		
+					<li><a href="http://sphinxsearch.com/downloads/dicts">Dictionaries</a></li>		
+					<li><a href="http://sphinxsearch.com/downloads/archive/">Archive</a></li>		
+				</ul>
+			</li>
+	<li>
+		<a href="http://sphinxsearch.com/services/">Services</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/services/support/">Enterprise Support</a></li>		
+					<li><a href="http://sphinxsearch.com/services/packages/">Package Matrix</a></li>		
+					<li><a href="http://sphinxsearch.com/services/consulting/">Consulting</a></li>		
+					<li><a href="http://sphinxsearch.com/services/development/">Development</a></li>		
+					<li><a href="http://sphinxsearch.com/services/embedding/">Embedding</a></li>		
+					<li><a href="http://sphinxsearch.com/services/training/">Training</a></li>		
+				</ul>
+			</li>
+	<li class="current">
+		<a href="http://sphinxsearch.com/community/" class="current">Community</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/forum/">Forum</a></li>		
+					<li><a href="http://sphinxsearch.com/wiki/">Wiki</a></li>		
+					<li><a href="http://sphinxsearch.com/bugs/">Bugtracker</a></li>		
+					<li><a href="http://sphinxsearch.com/community/projects/">Open Projects</a></li>		
+					<li><a href="http://sphinxsearch.com/wiki/doku.php?id=third_party">Plugins</a></li>		
+				</ul>
+			</li>
+	<li>
+		<a href="http://sphinxsearch.com/docs/">Resources</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/docs/">Documentation</a></li>		
+					<li><a href="http://sphinxsearch.com/info/studies/">Case-Studies</a></li>		
+					<li><a href="http://sphinxsearch.com/info/powered/">Powered by Sphinx</a></li>		
+					<li><a href="http://sphinxsearch.com/blog/">Blog</a></li>		
+					<li><a href="http://sphinxsearch.com/news/newsletter/">Newsletter</a></li>		
+				</ul>
+			</li>
+	<li>
+		<a href="http://sphinxsearch.com/partners/">Partners</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/partners/quartsoft/">Quartsoft</a></li>		
+					<li><a href="http://sphinxsearch.com/partners/flying_and_thinking_sphinx/">Flying &amp; Thinking Sphinx</a></li>		
+					<li><a href="http://sphinxsearch.com/partners/ivinco/">Ivinco</a></li>		
+					<li><a href="http://sphinxsearch.com/partners/monty_program/">Monty Program</a></li>		
+					<li><a href="http://sphinxsearch.com/partners/percona/">Percona</a></li>		
+					<li><a href="http://sphinxsearch.com/partners/skysql/">SkySQL</a></li>		
+				</ul>
+			</li>
+	<li>
+		<a href="http://sphinxsearch.com/about/sphinx/">About</a>
+				<ul>
+					<li><a href="http://sphinxsearch.com/about/company/">Company</a></li>		
+					<li><a href="http://sphinxsearch.com/about/contact/">Contact</a></li>		
+					<li><a href="http://sphinxsearch.com/about/careers/">Careers</a></li>		
+				</ul>
+			</li>
+</ul>
+<div id="search">
+<form action="http://sphinxsearch.com/search" method="get">
+<label for="search-input">Search:</label><input type="text" id="search-input" name="q">
+<input type="submit" value="">
+</form>
+</div>
+</div>
+<div id="forum">
+<div id="beef">
+<div id="banner">
+<div id="slider" class="nivoSlider theme-default" style="visibility: visible; position: relative; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) no-repeat;">
+<!--  -->
+<a href="http://shop.oreilly.com/product/9780596809539.do" class="nivo-imageLink" style="display: block;"><img src="./Tutorial  Installing on Windows   Sphinx_files/sphinx_book.jpg" alt="Sphinx the book from O&#39;Reilly and Sphinx" style="display: none;"></a>
+<div class="nivo-caption" style="opacity: 0;"><p></p></div><div class="nivo-directionNav" style="display: none;"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0">1</a></div><div class="nivo-slice" style="left: 0px; width: 1000px; height: 100%; opacity: 1; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) 0px 0% no-repeat;"></div><div class="nivo-slice" style="left: 67px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -67px 0% no-repeat;"></div><div class="nivo-slice" style="left: 134px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -134px 0% no-repeat;"></div><div class="nivo-slice" style="left: 201px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -201px 0% no-repeat;"></div><div class="nivo-slice" style="left: 268px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -268px 0% no-repeat;"></div><div class="nivo-slice" style="left: 335px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -335px 0% no-repeat;"></div><div class="nivo-slice" style="left: 402px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -402px 0% no-repeat;"></div><div class="nivo-slice" style="left: 469px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -469px 0% no-repeat;"></div><div class="nivo-slice" style="left: 536px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -536px 0% no-repeat;"></div><div class="nivo-slice" style="left: 603px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -603px 0% no-repeat;"></div><div class="nivo-slice" style="left: 670px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -670px 0% no-repeat;"></div><div class="nivo-slice" style="left: 737px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -737px 0% no-repeat;"></div><div class="nivo-slice" style="left: 804px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -804px 0% no-repeat;"></div><div class="nivo-slice" style="left: 871px; width: 67px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -871px 0% no-repeat;"></div><div class="nivo-slice" style="left: 938px; width: 62px; height: 0px; opacity: 0; background: url(http://sphinxsearch.com/g/sphinx_book.jpg) -938px 0% no-repeat;"></div></div>
+</div><div id="forum_user">
+anonymous user</div>
+
+<p class="header">
+<a href="http://sphinxsearch.com/forum/index.html">Forums</a>
+&nbsp; <a href="http://sphinxsearch.com/forum/register.html">Register</a>
+&nbsp; <a href="http://sphinxsearch.com/forum/login.html">Login</a>
+&nbsp; <a href="http://sphinxsearch.com/forum/restore.html">Forgot your login/password?</a>
+&nbsp; <a href="http://sphinxsearch.com/forum/search.html">Search</a>
+</p>
+<p class="forum_title">
+<a class="forum_title" href="./Tutorial  Installing on Windows   Sphinx_files/Tutorial  Installing on Windows   Sphinx.htm">Tutorial: Installing on Windows</a>
+
+
+</p><p class="forum_tiny">
+<a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1">Common forum</a> |
+	 <a class="forum_tiny_gray" href="http://sphinxsearch.com/forum/forum.html?id=1&page=1">1</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=2">2</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=3">3</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=4">4</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=5">5</a> | 	 ... |
+		 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=522">522</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=523">523</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=524">524</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=525">525</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=2">next »»</a> | <a class="forum_tiny" href="http://sphinxsearch.com/forum/post.html?id=1">Create new thread</a>
+
+</p><p>
+</p><table width="100%">
+
+<tbody><tr class="forum_light">
+	<td width="20%" style="padding: 10px;">
+		<a name="14791"></a>
+							<b>Das123</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Darren<br>				Posts: 25<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+				2009-02-06 07:08:29
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=14791">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">Well, I think I've come across just about every unusual nuance and hurdle in getting<br>
+Sphinx to work on a Windows system as is possible. :) The responses in this forum have<br>
+been a great help with people who have had similar problems - so thank you for posting.<br>
+<br>
+Anyhow, I thought I would share the problems and solutions I have had so far in a hope it<br>
+helps other 'Sphinx newbies' like me. I'm going to keep this REALLY comprehensive and<br>
+hopefully I won't leave anything out. I will however be glossing over the MySQL side of<br>
+things and assuming you have this under control. Lets also make the assumption that the<br>
+sample data provided in 'example.sql' is the basis for what we are building.<br>
+<br>
+<br>
+PREPARATION:<br>
+1. Make sure you download the 'Windows Binaries' version rather than the source version.<br>
+<br>
+<br>
+UNZIPPING THE CONTENTS:<br>
+2. Unzip the contents onto your hard-drive. You may also want to change the directory<br>
+name to just 'Sphinx' rather than keeping the version details as well. For the sake of<br>
+this exercise, we'll assume the location is 'C:\Sphinx\' to keep it simple.<br>
+<br>
+By the way, you can completely ignore the Installation Help for Windows in the 'docs'<br>
+directory. And you also won't be needing the C++ Compiler! The installation documentation<br>
+was written for installing from the source - not with the binaries already compiled as<br>
+per the version we have downloaded. That little tid-bit alone would have saved me a<br>
+couple of hours. :)<br>
+<br>
+<br>
+CONSTRUCTING THE CONFIG FILE:<br>
+Everything to do with the installation of Sphinx seems to come down to how you have built<br>
+your config file. It is important to get this right.<br>
+<br>
+For the sake of this exercise, I'm going to assume that I want my Sphinx configuration<br>
+and data files kept with a specific project rather than just sitting in with the Sphinx<br>
+executables. This will allow me to back-up the configs etc with the project and should<br>
+keep things a bit neater. For the sake of this exercise lets assume the location for<br>
+these will be in 'C:\Internet\Project\sphinx\'.<br>
+<br>
+3. Copy the 'sphinx-min.conf.in' file from the zip file root directory and paste it into<br>
+the new location. Lets also change the name to 'project.conf'. Also open up the<br>
+'sphinx.conf.in' file in your favourite text editor as this gives good reference of other<br>
+sorts of commands you may want to use and explains what the commands in the 'min' file<br>
+are for.<br>
+<br>
+4. Open up the new 'project.conf' file and fill in the following:<br>
+- You can change the name of the 'source' if you like. Just make sure you also change the<br>
+reference in the 'index'.<br>
+- Fill in the relevant SQL commands for the source, particularly making sure your<br>
+database connections are accurate.<br>
+- Change the index name as well if you wish.<br>
+- <b><i>*IMPORTANT</i></b>* Make sure you find all path references, eg: '@CONFDIR@/data/test1' and<br>
+convert them to full references with Windows directory slashes (\). So for this example,<br>
+it would read 'C:\Internet\Project\sphinx\data\test1'.<br>
+- <b><i>*IMPORTANT</i></b>* Make sure 'seamless_rotate = 0' in the 'searchd' section. This will<br>
+stop the search service from running if it is left set at '1'! (Only took me 90 minutes<br>
+to discover that little gem.)<br>
+<br>
+<br>
+PLACE THE LIBMYSQL.DLL FILE WHERE WINDOWS CAN FIND IT<br>
+5. Copy (not move) the 'libmySQL.dll' file from your MySQL install<br>
+(C:\wamp\bin\mysql\mysql5.0.51b\bin\libmySQL.dll on my system) and copy into your Windows<br>
+System32 folder (C:\Windows\System32\). There is probably a cleaner way to handle this,<br>
+but Sphinx looks for this when doing the setup of the data. There is most likely a<br>
+cleaner way to handle this with paths etc - but this method worked for me. :)<br>
+<br>
+<br>
+DATA &amp; LOG DIRECTORIES<br>
+6. The installation process can get bogged down if the installer can't find existing<br>
+directories for the data or log files. The safest bet is to physically make the 'data'<br>
+and 'log' files inside your configuration directory. In this example,<br>
+'C:\Internet\Project\sphinx\data\' and 'C:\Internet\Project\sphinx\log\'.<br>
+<br>
+<br>
+MAKING AN INSTALLATION BATCH FILE<br>
+I got tired of writing out the commands in the command prompt window so ended up just<br>
+writing a batch file to handle the installation. This also gives you a record of the<br>
+commands if you need to move everything to another system.<br>
+<br>
+7. Write the following (to suit your parameters) in a text editor and save it as<br>
+'sphinx_install.bat'. I saved mine in with the project.<br>
+<br>
+-------------------------START FILE-------------------------<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C:\sphinx\bin\indexer.exe --config C:\Internet\Project\sphinx\project.conf test1<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pause<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C:\sphinx\bin\searchd.exe --install --config C:\Internet\Project\sphinx\project.conf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--servicename ProjectSearch<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pause<br>
+<br>
+--------------------------END FILE---------------------------<br>
+<br>
+8. Double click the batch file. A Command window will open and initially run the indexer<br>
+and then pause, waiting for you to press any key. Read what it says carefully. It should<br>
+tell you what it did and also highlight any errors along the way which will help with<br>
+debugging.<br>
+<br>
+9. After pressing any key, the batch file should then run the 'searchd.exe' file and<br>
+create the search daemon (love that word ;) ). Read the printing in the command window to<br>
+make sure it did what it needed to do. You may get warnings about skipping sections -<br>
+don't worry, it's supposed to do that. :)<br>
+<br>
+STARTING THE SERVICE<br>
+10. Open the 'Services' window from 'Control Panel -&gt; Administrative Tools'. Now, we used<br>
+the '--servicename' switch so we should have a service called 'ProjectSearch'. Click on<br>
+it and then click 'Start Service'.<br>
+<br>
+If you get no errors, well done, the job is done and you can treat yourself to nice cool<br>
+drink, patting yourself on the back as you do so. :)<br>
+<br>
+DEBUGGING TIPS<br>
+If the service doesn't start, run the service as a console by typing the following in a<br>
+command prompt (changing the directories to suit your settings)...<br>
+<br>
+C:\sphinx\bin\searchd.exe --console --config C:\Internet\Project\sphinx\project.conf<br>
+<br>
+<br>
+Hope this helps other Windows installers out there. :)<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_dark">
+	<td width="20%" style="padding: 10px;">
+		<a name="14794"></a>
+							<b>Arantor</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Pete Spicer<br>				Posts: 4444<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14791">Das123</a>, 		2009-02-06 11:22:47
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=14794">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">First of all, thank you for writing this guide! I'm sure it will be appreciated.<br>
+<br>
+(I should add, there is a proper Windows installer in the works.)<br>
+<br>
+I do have a few comments though.<br>
+<br>
+<span class="forum_quote">&gt; - <b><i>*IMPORTANT</i></b>* Make sure 'seamless_rotate = 0' in the 'searchd' section. This will</span><br>
+<span class="forum_quote">&gt; stop the search service from running if it is left set at '1'! (Only took me 90 minutes</span><br>
+<span class="forum_quote">&gt; to discover that little gem.)</span><br>
+<br>
+No reason why it should do that. Works fine for me, 0.9.8.1 and 0.9.9 on WinXP.<br>
+<br>
+<span class="forum_quote">&gt; PLACE THE LIBMYSQL.DLL FILE WHERE WINDOWS CAN FIND IT</span><br>
+<span class="forum_quote">&gt; 5. Copy (not move) the 'libmySQL.dll' file from your MySQL install</span><br>
+<span class="forum_quote">&gt; (C:\wamp\bin\mysql\mysql5.0.51b\bin\libmySQL.dll on my system) and copy into your Windows</span><br>
+<span class="forum_quote">&gt; System32 folder (C:\Windows\System32\). There is probably a cleaner way to handle this,</span><br>
+<span class="forum_quote">&gt; but Sphinx looks for this when doing the setup of the data. There is most likely a</span><br>
+<span class="forum_quote">&gt; cleaner way to handle this with paths etc - but this method worked for me. :)</span><br>
+<br>
+That's something I forgot to pick up in the trouble-shooting thread. A copy of this is<br>
+going to be bundled in the installer.<br>
+<br>
+I think you can dump it in the same directory as the executable files for Sphinx.<br>
+<br>
+<span class="forum_quote">&gt; DATA &amp; LOG DIRECTORIES</span><br>
+<span class="forum_quote">&gt; 6. The installation process can get bogged down if the installer can't find existing</span><br>
+<span class="forum_quote">&gt; directories for the data or log files. The safest bet is to physically make the 'data'</span><br>
+<span class="forum_quote">&gt; and 'log' files inside your configuration directory. In this example,</span><br>
+<span class="forum_quote">&gt; 'C:\Internet\Project\sphinx\data\' and 'C:\Internet\Project\sphinx\log\'.</span><br>
+<br>
+This will not work. You have to provide full paths to the files, including filenames.<br>
+<br>
+<span class="forum_quote">&gt; MAKING AN INSTALLATION BATCH FILE</span><br>
+<span class="forum_quote">&gt; I got tired of writing out the commands in the command prompt window so ended up just</span><br>
+<span class="forum_quote">&gt; writing a batch file to handle the installation. This also gives you a record of the</span><br>
+<span class="forum_quote">&gt; commands if you need to move everything to another system.</span><br>
+<br>
+This is something that will be helped in the forthcoming installer, but is a good<br>
+solution for the interim.<br>
+<br>
+Note that you can run non-seamless rotating; i.e. leave the service to autostart (as<br>
+would be default) and simply add --rotate when calling indexer. Again, works perfectly<br>
+for me.<br>
+<br>
+<br>
+<span class="forum_quote">&gt; 9. After pressing any key, the batch file should then run the 'searchd.exe' file and</span><br>
+<span class="forum_quote">&gt; create the search daemon (love that word ;) ). Read the printing in the command window to</span><br>
+<span class="forum_quote">&gt; make sure it did what it needed to do. You may get warnings about skipping sections -</span><br>
+<span class="forum_quote">&gt; don't worry, it's supposed to do that. :)</span><br>
+<br>
+You could always remove the sections in question if you're not using either the inherited<br>
+example (test1stemmed IIRC) or the distributed example. None of my setups throw any<br>
+errors, for example.<br>
+<br>
+<span class="forum_quote">&gt; DEBUGGING TIPS</span><br>
+<span class="forum_quote">&gt; If the service doesn't start, run the service as a console by typing the following in a</span><br>
+<span class="forum_quote">&gt; command prompt (changing the directories to suit your settings)...</span><br>
+<br>
+<span class="forum_quote">&gt; C:\sphinx\bin\searchd.exe --console --config C:\Internet\Project\sphinx\project.conf</span><br>
+<br>
+If you run from CMD, you don't need to explicitly hit --console, it should force it<br>
+anyway.<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_light">
+	<td width="20%" style="padding: 10px;">
+		<a name="14825"></a>
+							<b>Das123</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Darren<br>				Posts: 25<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14794">Arantor</a>, 		2009-02-06 21:05:36
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=14825">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">Thanks for clearing up a few of the issues. The installer will be great. :)<br>
+<br>
+Below are some further comments:<br>
+<br>
+<span class="forum_quote">&gt; &gt; - <b><i>*IMPORTANT</i></b>* Make sure 'seamless_rotate = 0' in the 'searchd' section. This will</span><br>
+<span class="forum_quote">&gt; stop the search service from running if it is left set at '1'! (Only took me 90 minutes</span><br>
+<span class="forum_quote">&gt; to discover that little gem.)</span><br>
+<span class="forum_quote">&gt; </span><br>
+<span class="forum_quote">&gt; No reason why it should do that. Works fine for me, 0.9.8.1 and 0.9.9 on WinXP.</span><br>
+<br>
+Without this, when I was trying to start the service I was getting an error but it wasn't<br>
+telling me the issue. So I ended up running it from the console and an error message<br>
+stated that 'rotate' can't be used with windows. As 'seamless_rotate' was the only rotate<br>
+command in my config I just unset it and it worked.<br>
+<br>
+<span class="forum_quote">&gt; &gt; DATA &amp; LOG DIRECTORIES</span><br>
+<span class="forum_quote">&gt; &gt; 6. The installation process can get bogged down if the installer can't find existing</span><br>
+<span class="forum_quote">&gt; directories for the data or log files. The safest bet is to physically make the 'data'</span><br>
+<span class="forum_quote">&gt; and 'log' files inside your configuration directory. In this example,</span><br>
+<span class="forum_quote">&gt; 'C:\Internet\Project\sphinx\data\' and 'C:\Internet\Project\sphinx\log\'.</span><br>
+<span class="forum_quote">&gt; </span><br>
+<span class="forum_quote">&gt; This will not work. You have to provide full paths to the files, including filenames.</span><br>
+<br>
+Yes. I was trying to say that. :) The full paths need to be in the config file AND the<br>
+'data' and 'log' directories need to physically exist.<br>
+<br>
+Thanks again :)<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_dark">
+	<td width="20%" style="padding: 10px;">
+		<a name="14826"></a>
+							<b>Arantor</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Pete Spicer<br>				Posts: 4444<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14825">Das123</a>, 		2009-02-06 21:36:57
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=14826">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text"><span class="forum_quote">&gt; Without this, when I was trying to start the service I was getting an error but it wasn't</span><br>
+<span class="forum_quote">&gt; telling me the issue. So I ended up running it from the console and an error message</span><br>
+<span class="forum_quote">&gt; stated that 'rotate' can't be used with windows. As 'seamless_rotate' was the only rotate</span><br>
+<span class="forum_quote">&gt; command in my config I just unset it and it worked.</span><br>
+<br>
+All it means is that you can't use --rotate when building indexes unless searchd is<br>
+already running.<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_light">
+	<td width="20%" style="padding: 10px;">
+		<a name="23108"></a>
+							<b>agabardo</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Ademir Gabardo<br>				Posts: 2<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14791">Das123</a>, 		2009-10-01 22:17:32
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=23108">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">Hi, thank you very much for the help, I have run over the Internet for hours until find<br>
+this tutorial.<br>
+Now the service was Started at the windows.<br>
+But I was not sure what is the next steps.<br>
+Can somebody give me a tip?<br>
+Best Regards<br>
+Ademir Gabardo - Curitiba/Brasil<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_dark">
+	<td width="20%" style="padding: 10px;">
+		<a name="23118"></a>
+							<b>Arantor</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Pete Spicer<br>				Posts: 4444<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#23108">agabardo</a>, 		2009-10-02 11:00:28
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=23118">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text"><span class="forum_quote">&gt; Hi, thank you very much for the help, I have run over the Internet for hours until find</span><br>
+<span class="forum_quote">&gt; this tutorial.</span><br>
+<span class="forum_quote">&gt; Now the service was Started at the windows.</span><br>
+<span class="forum_quote">&gt; But I was not sure what is the next steps.</span><br>
+<span class="forum_quote">&gt; Can somebody give me a tip?</span><br>
+<br>
+As per the manual, build an index for your data, then start searching.<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_light">
+	<td width="20%" style="padding: 10px;">
+		<a name="23134"></a>
+							<b>agabardo</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Ademir Gabardo<br>				Posts: 2<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#23118">Arantor</a>, 		2009-10-02 13:44:50
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=23134">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">HI, my doubt is how to set wich querys will be indexed by the Sphinx engine.<br>
+I have several Selects, to index.<br>
+Each one will be a .conf file?<br>
+<br>
+If is this the case, after indexing the content, how I will search on this data?<br>
+I was looking to use PHP with Code Igniter.<br>
+<br>
+Thank's for any help.<br>
+This is my first contact with the Sphinx.<br>
+Best Regards<br>
+Ademir<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_dark">
+	<td width="20%" style="padding: 10px;">
+		<a name="34253"></a>
+							<b>avergara08</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Aaron<br>				Posts: 1<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14791">Das123</a>, 		2011-05-26 07:54:13
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=34253">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">thank you for this tutorial.<br>
+<br>
+everything went good for me until the .bat file. i keep getting this error:<br>
+<br>
+using config file 'C:\Internet\Project\sphinx\project.conf'...<br>
+indexing index 'test1'...<br>
+collected 4 docs, 0.0 MB<br>
+sorted 0.0 Mhits, 100.0% done<br>
+total 4 docs, 193 bytes<br>
+total 0.034 sec, 5538 bytes/sec, 114.79 docs/sec<br>
+total 2 reads, 0.000 sec, 0.1 kb/call avg, 0.0 msec/call avg<br>
+total 7 writes, 0.000 sec, 0.1 kb/call avg, 0.0 msec/call avg<br>
+Error in my_thread_global_end(): 1 threads didn't exit<br>
+<br>
+<br>
+<br>
+it will highly be appreciated if anyone can help. thank you :)<br>
+<br></span>
+	</td>
+</tr>
+
+
+<tr class="forum_light">
+	<td width="20%" style="padding: 10px;">
+		<a name="36974"></a>
+							<b>kschindler</b>
+											<p class="forum_tiny_gray" style="margin-top: 13px;">
+								Name: Kate<br>				Posts: 1<br>								</p></td>
+	<td align="left" width="80%" style="padding: 10px;">
+		<p class="forum_tiny">
+		 to: <a class="forum_tiny_to" href="http://sphinxsearch.com/forum/view.html?id=2972#14791">Das123</a>, 		2011-10-03 19:24:04
+		 | <a class="forum_tiny" href="http://sphinxsearch.com/forum/reply.html?id=36974">reply!</a>						<br>
+		</p><hr size="1" width="100%" color="#333333">
+
+		<span class="forum_text">This is by far the best tutorial I've seen out there - thank you so much!<br>
+<br>
+I realize that the MediaWiki forums might be a better place for my question, and if so I<br>
+apologize. But similar questions in that forum tend to either say "Try the Sphinx forum"<br>
+or don't get replies, so here I am. I'm not a programmer, and don't have access to one<br>
+for this project. If there's a simpler extension to get my offline Wikipedia search to<br>
+work (it times out and rarely loads the full page even when it works), I'm fine with<br>
+that, but this is the only one I've read about.<br>
+<br>
+I only got up to step 8 in the instructions. I believe I did everything correctly except<br>
+step 5 (I don't have a libmysql.dll file in C:\wamp\bin\mysql\mysql5.5.8\bin), but when I<br>
+tried to run the batch file in step 8 I got "ERROR: index 'test1': sql_query: Table<br>
+'wikipedia.documents' doesn't exist (DSN=mysql://root:***@localhost:3306/wikipedia)."<br>
+<br>
+Thanks in advance for your help!<br>
+<br></span>
+	</td>
+</tr>
+
+</tbody></table>
+<p class="forum_tiny" style="margin-top: 1em">
+<a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1">Common forum</a> |
+	 <a class="forum_tiny_gray" href="http://sphinxsearch.com/forum/forum.html?id=1&page=1">1</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=2">2</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=3">3</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=4">4</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=5">5</a> | 	 ... |
+		 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=522">522</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=523">523</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=524">524</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=525">525</a> | 	 <a class="forum_tiny" href="http://sphinxsearch.com/forum/forum.html?id=1&page=2">next »»</a> | <a class="forum_tiny" href="http://sphinxsearch.com/forum/post.html?id=1">Create new thread</a>
+
+</p></div>
+<div id="sitemap">
+	<div class="sitemapcol">
+		<h5>News</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/blog/">Blog</a></li>
+			<li><a href="http://sphinxsearch.com/news/maillist/">Mailing list</a></li>
+			<li><a href="http://sphinxsearch.com/blog/feed/rss/">Rss</a></li>
+		</ul>
+	</div>
+	<div class="sitemapcol">
+		<h5>Downloads</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/downloads/release/">Release</a></li>
+			<li><a href="http://sphinxsearch.com/downloads/beta/">Beta</a></li>
+			<li><a href="http://sphinxsearch.com/downloads/#svn">Development/SVN</a></li>
+			<li><a href="http://sphinxsearch.com/downloads/dicts">Dictionaries</a></li>
+			<li><a href="http://sphinxsearch.com/downloads/archive/">Archive</a></li>
+		</ul>
+	</div>
+	<div class="sitemapcol">
+		<h5>Services</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/services/support/">Enterprise Support</a></li>
+			<li><a href="http://sphinxsearch.com/services/packages/">Package Matrix</a></li>
+			<li><a href="http://sphinxsearch.com/services/consulting/">Consulting</a></li>
+			<li><a href="http://sphinxsearch.com/services/development/">Development</a></li>
+			<li><a href="http://sphinxsearch.com/services/embedding/">Embedding</a></li>
+			<li><a href="http://sphinxsearch.com/services/training/">Training</a></li>
+		</ul>
+	</div>
+	<div class="sitemapcol">
+		<h5>Community</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/forum/">Forum</a></li>
+			<li><a href="http://sphinxsearch.com/wiki/">Wiki</a></li>
+			<li><a href="http://sphinxsearch.com/bugs/">Bugtracker</a></li>
+			<li><a href="http://sphinxsearch.com/community/projects/">Open Projects</a></li>
+			<li><a href="http://sphinxsearch.com/wiki/doku.php?id=third_party">Plugins</a></li>
+		</ul>
+	</div>
+	<div class="sitemapcol">
+		<h5>Resources</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/docs/">Documentation</a></li>
+			<li><a href="http://sphinxsearch.com/info/studies/">Case-Studies</a></li>
+			<li><a href="http://sphinxsearch.com/info/powered/">Powered by Sphinx</a></li>
+			<li><a href="http://sphinxsearch.com/blog/">Blog</a></li>
+			<li><a href="http://sphinxsearch.com/news/newsletter/">Newsletter</a></li>
+		</ul>
+	</div>
+	<div class="sitemapcol">
+		<h5>About</h5>
+		<ul>
+			<li><a href="http://sphinxsearch.com/about/sphinx/">Sphinx</a></li>
+			<li><a href="http://sphinxsearch.com/about/company/">Company</a></li>
+			<li><a href="http://sphinxsearch.com/about/contact/">Contact</a></li>
+			<li><a href="http://sphinxsearch.com/about/careers/">Careers</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">Copyright © 2001-2014, Sphinx Technologies Inc.</div>
+
+</div><!--wrapper-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Tutorial  Installing on Windows   Sphinx_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1001555-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script src="./Tutorial  Installing on Windows   Sphinx_files/jquery.js"></script>
+<script src="./Tutorial  Installing on Windows   Sphinx_files/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./Tutorial  Installing on Windows   Sphinx_files/jquery.timers.js"></script>
+<script src="./Tutorial  Installing on Windows   Sphinx_files/search.js"></script>
+<script src="./Tutorial  Installing on Windows   Sphinx_files/jquery.nivo.slider.pack.js"></script>
+
+<script>
+$(window).load(function() {
+   $('#slider').css({'visibility':'visible'}).nivoSlider({
+       effect: 'fade',
+       pauseTime: 5000,
+       animSpeed: 200,
+       keyboardNav : false
+   });
+
+});
+</script>
+
+
+
+</div></body></html>
