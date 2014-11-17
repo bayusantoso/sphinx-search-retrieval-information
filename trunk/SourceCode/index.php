@@ -34,7 +34,10 @@
     if (file_exists($config["controller_folder"]."/".$file."controller.php")) {
         require_once $config["controller_folder"]."/".$file."controller.php";
     } else {
-        $error .= "<p class='error'>Controller file for ".$file." is not found</p>";
+        $content = 'helpers/page_404.php';
+        $data['master'] = "shared/master";
+        require_once $config["view_folder"]."/".$data['master'].".php";
+        return true;
     }
     
     require_once "helpers/render_view.php";
