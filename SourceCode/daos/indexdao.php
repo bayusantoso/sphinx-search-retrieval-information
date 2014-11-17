@@ -24,6 +24,7 @@ class IndexDao extends Dao {
         $s->setMatchMode(SPH_MATCH_EXTENDED2);
         $result_query = $s->Query($keyword);
         $result = array();
+        
         if ($result_query['total'] > 0) {
             foreach ($result_query['matches'] as $id => $otherStuff) {
                 $DocObj = $this->getObjectDocument($id);

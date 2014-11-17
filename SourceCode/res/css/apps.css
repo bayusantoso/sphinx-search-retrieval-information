@@ -22,7 +22,7 @@ a{
 }
 
 #title .query-found{
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #sub-title {
@@ -35,6 +35,7 @@ a{
 
 #text {
     margin-top: 10px;
+    width: 800px;
 }
 
 .keyword {
@@ -47,4 +48,7 @@ a{
 
 .result-content {
     margin-bottom: 10px;
+}
+.form-actions {
+    border-bottom: 1px solid #e5e5e5;
 }

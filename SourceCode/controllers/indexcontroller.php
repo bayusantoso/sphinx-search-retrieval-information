@@ -19,10 +19,14 @@ Class IndexController extends Controller {
         $this->data['master'] = "shared/master";
         $this->data['view'] = "result";
         $query = $this->getParam("query");
+        $time_start = $this->microtimeFloat();
         $model = $this->IndexService->getList($query);
         $this->data['Model'] = $model;
         $this->data['query'] = $query;
         $this->data['_PAGING_'] = $this->generatePaging();
+        $time_end = $this->microtimeFloat();
+        $time = $time_end - $time_start;
+        $this->data['elapsed_time'] = round($time,2);
         return $this->data;
     }
     
