@@ -32,14 +32,14 @@
         }
     ?>
     <div id="title"><?php echo $title; ?></div>
-    <div id="sub-title"><?php echo (!empty($Model->getAuthor()) ? $Model->getAuthor() : "No Author"); ?></div>
+    <div id="sub-title">by <?php echo (!empty($Model->getAuthor()) ? $Model->getAuthor() : "No Author"); ?></div>
     <div id="text">
-        <?php echo $Model->getContent(); ?>
+        <?php echo str_ireplace("\n", "<br />", $Model->getContent()); ?>
     </div>
     <?php } else {?>
     No Result
     <?php } ?>
     <hr />
-    <a href="<?php echo base_url()."/index/result"; ?>">Back To Result</a>
+    <a href="<?php echo base_url()."/index/result?query=".(isset($query) ? $query : ""); ?>">Back To Result</a>
     <hr />
 </div>

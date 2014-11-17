@@ -1,3 +1,4 @@
+<?php require_once '/helpers/summary_builder.php'; ?>
 <div class="form-actions">
     <center>
         <div id="logo">
@@ -23,7 +24,7 @@
     </center>
     <hr />
     <?php if(!is_null($Model)) { ?>
-    Found <?php if(!is_null($Model)) { echo $Model->getResultCount(); } ?> results for keyword <span class="keyword"><?php echo (isset($query) ? $query : ""); ?></span>.
+    Found <?php if(!is_null($Model)) { echo ($Model->getResultCount() > 1 ? $Model->getResultCount()." results" : $Model->getResultCount()." result" ); } ?> for keyword <span class="keyword"><?php echo (isset($query) ? $query : ""); ?></span> in <?php echo (isset($elapsed_time) ? $elapsed_time : ""); ?> seconds.
     <?php echo (isset($_PAGING_) ? $_PAGING_ : ""); ?>
     <hr />
     <?php if(!is_null($Model)) {
@@ -33,10 +34,12 @@
     ?>
     <div class="result-content">
         <div id="title"><a href="<?php echo base_url()."/index/detail?id=".$item->getId()."&query=".(isset($query) ? $query : ""); ?>"><?php echo str_ireplace($query, "<span class='query-found'>".ucfirst($query)."</span>", $item->getTitle()) ?></a></div>
-    <div id="sub-title"><?php echo (!empty($item->getAuthor()) ? str_replace($query, "<span class='query-found'>".$query."</span>", $item->getAuthor()) : "No Author"); ?></div>
-    <div id="text">
-        <?php echo str_ireplace($query, "<span class='query-found'>".$query."</span>", $item->getContent()) ?>
-    </div>
+        <div id="sub-title">by <?php echo (!empty($item->getAuthor()) ? str_replace($query, "<span class='query-found'>".$query."</span>", $item->getAuthor()) : "No Author"); ?></div>
+        <div id="text">
+            <?php 
+                echo summaryBuilder($query, $item->getContent());
+            ?>
+        </div>
     </div>
     <?php
             }
